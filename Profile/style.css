@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+body{
+  color: #383e45;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+/* HEADER
+------------------------------- */
+.logo {
+  width: 120px;
+  margin-top: 10px;
+}
+.main-nav {
+  display: flex;
+  font-size: 0.9rem;
+  margin-top: 30px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 40px;
+}
+.main-nav a {
+  color: #24292e;
+}
+.main-nav a:hover {
+  color: #888;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* main*/
+.mainvisual img{
+  width: 100%;
+  max-width: 1800px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.mainvisual{
+  margin-bottom: 70px;
+}
+
+/* about
+------------------------------- */
+.about{
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 auto;
+  text-align: center;
+}
+
+.title{
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: solid 1px ;
+  font-size: 32px;
+}
+
+.flex{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.trim-image-to-circle .img{
+  width:  100px;       /* ※縦横を同値に */
+  height: 100px;       /* ※縦横を同値に */
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  background-position: left top;  /* 横長画像の左上を基準に表示 */
+  display: inline-block;          /* 複数の画像を横に並べたい場合 */
+}
+
+.flex .right{
+  text-align: left;
+}
+
+.flex .name{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.flex .text{
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.flex .img{
+  overflow: hidden;
+  position: relative;
+}
+
+.flex .image::before{
+  content: "";
+  display: block;
+  padding-top: 58%;
+}
+
+.flex .image img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* bicyle
+------------------------------- */
+.bicyle{
+  text-align: center;
+}
+.grid{
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.wrapper h1{
+  text-align: center;
+  font-size: 16px;
+}
+
+.wrapper p{
+  text-align: center;
+  font-size: 14px;
+}
+
+/* footer
+------------------------------- */
+footer{
+  text-align: center;
+  font-size: 0.5rem;
+  padding: 10px 0;
+}
+
+/* モバイル版
+------------------------------- */
+@media (max-width: 600px) {
+
+  .title {
+    font-size: 2.5rem;
+  }
+  .page-header {
+    display: flex;
+    align-items: center;
+  }
+
+  /* HEADER */
+  .main-nav {
+    display: flex;
+    font-size: 1rem;
+  }
+  .main-nav li {
+    margin: 0 20px;
+  }
+
+  .flex{
+    display: inline-block;
+  }
+
+  .right{
+    padding: 0 4%;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .bicyle .wrapper{
+    text-align: center;
+    display: inline-block;
+  }
+
+  .container .item h1{
+    font-size: 15px;
+  }
+
+  footer{
+    margin-top: 60px;
+  }
+}
